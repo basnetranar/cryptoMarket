@@ -1,0 +1,24 @@
+$darkSlate: #7e828b;
+
+header{
+	color:green; margin: 0.5em 1em 0.5em 1em; 
+	#mainHeading{
+		font-size: 2em;text-shadow: 1px 1px blue;
+	}
+	.motto{
+		font-size: 1.2em;
+	}
+}
+nav{
+	font-size: 1.1em; 
+	div ul li {
+	margin-right: 1em;
+	}
+}
+
+.footer1{
+	position: relative; bottom: 1em; left: 1em; color:$darkSlate;
+}
+.footer2{
+	position: relative; bottom: 1em; left: 1em; color: $darkSlate;
+}

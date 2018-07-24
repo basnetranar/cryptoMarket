@@ -1,0 +1,70 @@
+
+     
+<div class="form-group">
+  
+  <span class="selectOne">
+    <label for="crypto" ><strong>Crypto:</strong></label>
+    <select ng-options="option for option in cryptoTypes" 
+              ng-model="selectedCrypto"
+              id = 'crypto'
+              ng-change="selectedCryptoChanged()">
+    </select>
+  </span>
+
+  <span class="selectTwo">
+    <label for="currency"><strong>Currency:</strong></label>
+    <select ng-options="option for option in currencyTypes" 
+              ng-model="selectedCurrency"
+              id="currency" 
+              ng-change="selectedCurrencyChanged()">
+    </select>
+  </span>
+
+</div>
+
+
+    <table class="table table-striped" id="table1">
+      <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Price</th>
+          <th scope="col">Volume Traded (24 hr)</th>
+          <th scope="col">Change (1 hr)</th>
+        </tr>
+      </thead>
+
+      <tbody class="text-primary">
+        <tr>
+          <td scope="col">{{base}}</td>
+          <td scope="col">{{price | currency}}</td>
+          <td scope="col">{{volume}}</td>
+          <td scope="col">{{change}}</td>
+        </tr>
+          
+      </tbody>
+    </table>
+</br>
+
+
+<table class="table table-striped bg-white" id="table2">
+  <thead >
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Market</th>
+      <th scope="col">Price</th>
+      <th scope="col">Volume Traded (24 hr)</th>
+    </tr>
+  </thead>
+
+  <tbody class=" text-primary " >
+    <tr ng-repeat= "values in marketArray" class="secondTableBody">
+      <td scope="col">{{$index + 1}}</td>
+      <td scope="col">{{values.market}}</td>
+      <td scope="col">{{values.price | currency}}</td>
+      <td scope="col">{{values.volume}}</td>
+    </tr>
+      
+  </tbody>
+</table>
+<div class="processedTime" align = "right">{{currentTime}}</div>
+<br><br>

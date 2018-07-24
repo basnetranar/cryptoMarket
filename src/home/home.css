@@ -1,0 +1,33 @@
+
+.selectOne{
+	color:#4c3899;
+	font-size: 18px;
+	margin-right: 3em;
+	margin-left: 1em;
+}
+select:hover{
+	color:red;
+}
+
+.selectTwo{
+	color:#4c3899;
+	font-size: 18px;
+}
+
+#table1{
+	background-color: #dae2e2;
+	font-size: 15px;
+	padding-bottom: 0.1px;
+	padding-top: 0.1px;
+}
+#table2{
+	background-color: #dae2e2;
+	font-size: 15px;
+}
+.secondTableBody:hover{
+	background-color: #d1cbec;
+}
+.processedTime{
+	color: #81186c;
+	font-size: 1.1em;
+}

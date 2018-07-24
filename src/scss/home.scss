@@ -1,0 +1,14 @@
+$darkSlate: #686b73;
+$strongSlate: #44464b;
+.form-group {
+	span{
+		margin-left: 1em; margin-right: 2em;
+		select{
+			padding: 0.2em; color: $strongSlate;
+		}
+
+	}
+	label{
+		color: $darkSlate;
+	}
+}

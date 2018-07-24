@@ -1,0 +1,21 @@
+.changeCursor{
+	cursor: pointer;
+}
+
+.processedTime{
+	color: #81186c;
+	font-size: 1.1em;
+}
+
+.tableBody{
+	background-color: #cddfda;
+}
+.tableSize{
+	height: 600px;
+	overflow: scroll;
+	background-color: white;
+}
+
+.searchField{
+	font-family: 2em;
+}

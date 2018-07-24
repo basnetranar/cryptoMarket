@@ -1,0 +1,9 @@
+.form-group span {
+  margin-left: 1em;
+  margin-right: 2em; }
+  .form-group span select {
+    padding: 0.2em;
+    color: #44464b; }
+
+.form-group label {
+  color: #686b73; }

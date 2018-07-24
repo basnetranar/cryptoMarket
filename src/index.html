@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <title>Crypto Market</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/liveTable.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body >
+  <div class="container">
+  <!-- Header for the page -->
+  <header>
+    <span id="mainHeading" >CRYPTOMARKET </span>
+    <span class="motto">Buy, Sell, Flourish</span>
+  </header>
+  <!-- Navigation options -->
+  <nav class="navbar navbar-expand navbar-inverse">
+    <div class="collapse navbar-collapse ">
+      <ul class="nav navbar-nav">
+        <li ><a href="#/home">Home</a></li>
+        <li><a href="#/liveTable">Live Table</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <li ng-click = "signUp"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li ng-click = "login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+   
+  <div ng-view></div>
+  
+	</br><br>
+	<footer class="footer1">&copy; Market Values obtained from https://api.cryptonator.com/</footer>
+	<footer class="footer2"> &copy; basnetranar 2018</footer>
+ 
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="liveTable/liveTable.js"></script>
+  <script src="home/home.js"></script>
+
+</body>
+</html>

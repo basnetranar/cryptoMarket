@@ -1,0 +1,66 @@
+#bodyB{
+	background-color: #b5fcfa;
+}
+.navbar-nav{
+	list-style-type: none;
+	height: 0.8em;
+	font-size: 23px;
+}
+img{
+	border-radius: 50%;
+}
+#mainHeading{
+	color:green;
+	font-size: 45px;
+	text-shadow: 2px 2px blue;
+	background-color: white;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-bottom: none;
+}
+
+#motto{
+	color:green;
+	font-size: 25px;
+	text-shadow: 1px 1px blue;
+	background-color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0.3em;
+	padding-top: 0.3em;
+	border-top: none;
+
+}
+.navbar{
+	margin-top: 0px;
+	background-color: #b6bbaf;
+	color:#1805c7;
+	padding-bottom: 0em;
+	padding-top: 0.1em;
+}
+
+.nav-link{
+	margin-right: 5em;
+}
+.nav-link:hover{
+	color: #c70525;
+}
+@keyframes rotatingLogo{
+	0% {transform: rotate(-360deg);}
+	25%:{transform: rotate(72deg);}
+	50%:{transform: rotate(72deg);}
+	75%:{transform: rotate(72deg);}
+	100%:;{transform: rotate(72deg);}
+}
+
+img {
+    animation-name: rotatingLogo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+footer{
+	color: #81186c;
+	font-size: 0.8em;
+
+}

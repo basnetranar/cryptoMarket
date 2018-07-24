@@ -1,0 +1,25 @@
+header {
+  color: green;
+  margin: 0.5em 1em 0.5em 1em; }
+  header #mainHeading {
+    font-size: 2em;
+    text-shadow: 1px 1px blue; }
+  header .motto {
+    font-size: 1.2em; }
+
+nav {
+  font-size: 1.1em; }
+  nav div ul li {
+    margin-right: 1em; }
+
+.footer1 {
+  position: relative;
+  bottom: 1em;
+  left: 1em;
+  color: #7e828b; }
+
+.footer2 {
+  position: relative;
+  bottom: 1em;
+  left: 1em;
+  color: #7e828b; }
