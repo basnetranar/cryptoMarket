@@ -6,9 +6,18 @@ $strongSlate: #44464b;
 		select{
 			padding: 0.2em; color: $strongSlate;
 		}
-
 	}
 	label{
 		color: $darkSlate;
 	}
+}
+
+.processedTime{
+	float: right;
+}
+
+
+#barChart1{
+	margin-top: 1em; margin-left: 1em; max-height: 30em;
+	overflow: auto;
 }

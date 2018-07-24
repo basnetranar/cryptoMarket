@@ -1,0 +1,9 @@
+div.row{
+	margin-top: 1em;
+}
+#liveTable{
+	max-height: 40em;overflow: auto;
+	.changeCursor{
+	cursor: pointer;
+	}
+}
