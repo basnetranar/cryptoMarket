@@ -12,7 +12,8 @@ angular.module('myApp.liveTable', ['ngRoute'])
 
 .controller('liveTableController', ['$scope','$http','$interval',function($scope,$http,$interval) {
 	$scope.referenceVar = "volume";
-
+	let name = [], price = [], volume = [], graphdata = [];
+	let labels = ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"];
 	$scope.dataArray = [];
 	$scope.searchedData = ""; //search field value
 	$scope.searchedDataArray = []; //final array sent to view
@@ -31,8 +32,8 @@ angular.module('myApp.liveTable', ['ngRoute'])
 		$scope.result = (response.data);
 		$scope.dataArray = [];
 
-		for(var datas in $scope.result.data){
-			var tempDataArray = {};
+		for(let datas in $scope.result.data){
+			let tempDataArray = {};
 			tempDataArray.name=($scope.result.data[datas].name);
 			tempDataArray.price=($scope.result.data[datas].quotes.USD.price);
 			tempDataArray.volume_24h=($scope.result.data[datas].quotes.USD.volume_24h);
@@ -45,6 +46,60 @@ angular.module('myApp.liveTable', ['ngRoute'])
 		};
 		
 		$scope.currentTime = Date();
+		if($scope.dataArray.length >=5){
+			name = []; price = []; volume = [];
+			for(let i=0;i<5;i++){
+				name.push($scope.dataArray[i].name);
+				price.push($scope.dataArray[i].price);
+				volume.push($scope.dataArray[i].volume_24h);
+			};
+		}
+
+		// create doughnut chart for top 5 most popular crypto currency
+		let newChart = document.getElementById("doughnutChart").getContext('2d');
+		if($scope.canvas1!=null){$scope.canvas1.destroy();}
+		
+		$scope.canvas1 = new Chart(newChart, {
+		    type: 'bar',
+		    data: {
+		      labels: name,
+		      datasets: [
+		        {
+		          label: "Price ($)",
+		          backgroundColor: labels,
+		          data: price
+		        }
+		      ]
+		    },
+		    options: {
+		      responsive: true,
+		      cutoutPercentage: 45,
+              maintainAspectRatio: true,
+                scales: {
+		            xAxes: [{
+		                display: true
+		            }],
+		            yAxes: [{
+		                display: true,
+		                type: 'logarithmic'
+		            }]
+		        },
+		      legend: { 
+		      	display: false,
+		      	position: 'top',
+                labels: {
+                    fontSize: 11,
+                    boxWidth: 10
+                    } 
+              },
+		      title: {
+		        display: true,
+		        text: 'Most popular Cryptos',
+		        fontSize: 14
+		      }
+		    }
+		});
+		
 
 		}),
 		function errorCallback(response) {

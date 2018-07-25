@@ -6,3 +6,7 @@ div.row {
   overflow: auto; }
   #liveTable .changeCursor {
     cursor: pointer; }
+
+.graphColumn {
+  max-height: 35em;
+  overflow: auto; }

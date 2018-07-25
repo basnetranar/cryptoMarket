@@ -24,6 +24,7 @@ angular.module('myApp.home', ['ngRoute'])
 	$scope.volume = 0;
 	$scope.change = 0;
 	let labels12 = [], data1 = [], data2 = [];
+	let newChart = document.getElementById("barChart1").getContext('2d');
 
 	$scope.selectedCurrencyChanged = function(){
     $scope.Currency = $scope.selectedCurrency;
@@ -67,8 +68,8 @@ angular.module('myApp.home', ['ngRoute'])
 		};
 
 		// Create bar chart using chartjs
-		let newChart = document.getElementById("barChart1").getContext('2d');
-		if($scope.canvas1!=null){$scope.canvas1.destroy(); console.log('instance destroyed');}
+		
+		if($scope.canvas1!=null){$scope.canvas1.destroy();}
 		
 		$scope.canvas1 = new Chart(newChart, {
 		    type: 'bar',
@@ -86,7 +87,7 @@ angular.module('myApp.home', ['ngRoute'])
 		      legend: { display: false },
 		      title: {
 		        display: true,
-		        text: 'Price($) in each market',
+		        text: $scope.Crypto + ' trading prices',
 		        fontSize: 16
 		      }
 		    }
